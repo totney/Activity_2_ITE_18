@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import * as dat from 'lil-gui';
-import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHelper.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 
 /**
  * Base
@@ -21,10 +21,10 @@ const scene = new THREE.Scene();
 const textureLoader = new THREE.TextureLoader();
 
 // Grass Textures
-const grassColorTexture = textureLoader.load('/textures/grass/color.jpg');
-const grassAmbientOcclusionTexture = textureLoader.load('/textures/grass/ambientOcclusion.jpg');
-const grassNormalTexture = textureLoader.load('/textures/grass/normal.jpg');
-const grassRoughnessTexture = textureLoader.load('/textures/grass/roughness.jpg');
+const grassColorTexture = textureLoader.load('./grass/color.jpg');
+const grassAmbientOcclusionTexture = textureLoader.load('./grass/ambientOcclusion.jpg');
+const grassNormalTexture = textureLoader.load('./grass/normal.jpg');
+const grassRoughnessTexture = textureLoader.load('./grass/roughness.jpg');
 
 grassColorTexture.repeat.set(8, 8);
 grassAmbientOcclusionTexture.repeat.set(8, 8);
